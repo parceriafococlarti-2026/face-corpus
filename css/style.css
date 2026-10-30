@@ -69,7 +69,7 @@ em{font-weight:400;color:var(--gold-dark)}
 .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:19px;margin-top:25px}
 .hero-actions .button{width:100%;max-width:310px}
 .hero-footnote{margin:34px 0 0;padding-left:14px;border-left:1px solid var(--gold);font-size:11px;color:var(--muted)}
-.hero-image{height:315px;position:relative;background:#ddd0bc url("../assets/images/editorial-texture.jpg") center 48%/cover no-repeat}
+.hero-image{height:315px;position:relative;background:#c7b59d url("../assets/images/WhatsApp Image 2026-10-30 at 08.11.18 (1).jpeg") center 42%/cover no-repeat}
 .hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(36,30,23,.29))}
 .hero-image-caption{position:absolute;z-index:1;bottom:14px;left:17px;right:17px;display:flex;justify-content:space-between;gap:15px;color:white;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
 .hero-rail{display:flex;justify-content:space-between;gap:20px;padding-block:16px;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.12em}
@@ -135,15 +135,27 @@ em{font-weight:400;color:var(--gold-dark)}
 
 /* Experience, process, about */
 .experience{background:var(--white)}
-.experience-grid{display:grid;gap:37px}
-.experience-visual{position:relative;height:360px;background:var(--cream);overflow:hidden}
-.experience-visual>img{width:100%;height:100%;object-fit:cover;object-position:center 68%}
-.experience-stamp{position:absolute;left:15px;bottom:15px;display:flex;align-items:center;gap:8px;padding:7px 15px 7px 7px;background:var(--ivory);box-shadow:0 5px 15px #302d2818}
-.experience-stamp img{width:40px;height:40px;object-fit:cover;border-radius:50%}
-.experience-stamp span{font-size:8px;line-height:1.5;font-weight:700;letter-spacing:.1em}
-.experience-copy h2{margin:16px 0 22px}
-.experience-copy p:not(.eyebrow){max-width:510px;color:var(--body);font-size:13px;line-height:1.9}
-.experience-copy .inline-link{margin-top:8px}
+.experience-heading>div:last-child>p{max-width:430px;margin:0;color:var(--body);font-size:13px;line-height:1.9}
+.experience-heading .inline-link{margin-top:14px}
+.experience-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.gallery-card{position:relative;min-width:0;min-height:190px;margin:0;overflow:hidden;background:#e6ded2}
+.gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery-card:hover img{transform:scale(1.035)}
+.gallery-card::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(180deg,transparent,rgba(22,17,12,.5));pointer-events:none}
+.gallery-card figcaption{position:absolute;z-index:1;right:13px;bottom:11px;left:13px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.gallery-team{grid-column:1/-1;height:375px}
+.gallery-professional,.gallery-reception{height:270px}
+.gallery-room,.gallery-consultation,.gallery-details,.gallery-hallway,.gallery-treatment-room,.gallery-treatment-suite,.gallery-waiting{grid-column:1/-1;height:230px}
+.gallery-team img{object-position:center 38%}
+.gallery-professional img{object-position:55% center}
+.gallery-reception img{object-position:center 46%}
+.gallery-room img{object-position:center 60%}
+.gallery-consultation img{object-position:center 55%}
+.gallery-details img{object-position:center 60%}
+.gallery-hallway img{object-position:center 55%}
+.gallery-treatment-room img{object-position:center 52%}
+.gallery-treatment-suite img{object-position:center 50%}
+.gallery-waiting img{object-position:center 53%}
 .process{background:var(--cream)}
 .process-list{display:grid;gap:0;margin:0 0 31px;padding:0;list-style:none;border-top:1px solid #cfc8bd}
 .process-list li{display:grid;grid-template-columns:45px 1fr;column-gap:13px;padding:22px 0;border-bottom:1px solid #cfc8bd}
@@ -170,7 +182,7 @@ em{font-weight:400;color:var(--gold-dark)}
 .social-quote span{font-size:7px;font-weight:700;letter-spacing:.1em}
 .social-quote strong{font-family:var(--serif);font-size:clamp(20px,5vw,27px);font-weight:400;line-height:1}
 .social-grid>.social-photo{grid-column:1/-1;aspect-ratio:2.15}
-.social-photo img{object-position:60% 65%}
+.social-photo img{object-position:55% center}
 .social-button{margin-top:25px}
 
 /* FAQ, map */
@@ -231,6 +243,10 @@ em{font-weight:400;color:var(--gold-dark)}
   .social-grid>.social-photo{grid-column:auto;aspect-ratio:1}
   .social-quote{padding:19px}
   .social-quote span{font-size:8px}
+  .experience-gallery{gap:10px}
+  .gallery-team{height:520px}
+  .gallery-professional,.gallery-reception{height:350px}
+  .gallery-room,.gallery-consultation,.gallery-details,.gallery-hallway,.gallery-treatment-room,.gallery-treatment-suite,.gallery-waiting{height:310px}
   .location-details address{font-size:29px}
   .footer-main{grid-template-columns:1.4fr 1fr 1fr;gap:25px}
   .footer-bottom{grid-template-columns:1fr 1fr;gap:20px}
@@ -252,7 +268,7 @@ em{font-weight:400;color:var(--gold-dark)}
   .hero h1{font-size:clamp(65px,6vw,91px)}
   .hero-description{font-size:14px}
   .hero-footnote{margin-top:48px}
-  .hero-image{height:auto;min-height:620px;margin-right:calc((min(100vw,var(--container)) - 100vw)/2);background-position:center 60%}
+  .hero-image{height:auto;min-height:620px;margin-right:calc((min(100vw,var(--container)) - 100vw)/2);background-position:center 42%}
   .hero-image-caption{bottom:23px;left:24px;right:24px}
   .hero-rail{padding-block:18px}
   .section-heading{grid-template-columns:1.4fr .6fr;align-items:end;gap:60px;margin-bottom:49px}
@@ -282,9 +298,18 @@ em{font-weight:400;color:var(--gold-dark)}
   .integrated-list article{grid-template-columns:60px 250px 1fr;align-items:start;gap:20px;padding:30px 0}
   .integrated-list p{grid-column:3;padding-top:4px;font-size:13px}
   .integrated-list h3{font-size:34px}
-  .experience-grid{grid-template-columns:48% 1fr;gap:8%;align-items:center}
-  .experience-visual{height:580px}
-  .experience-copy h2{font-size:clamp(60px,5.5vw,82px)}
+  .experience-heading{margin-bottom:49px}
+  .experience-heading h2{font-size:clamp(60px,5.5vw,82px)}
+  .experience-gallery{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:220px 220px 320px 250px 250px;gap:14px}
+  .gallery-card{height:auto!important;min-height:0}
+  .gallery-team{grid-column:span 2;grid-row:span 2}
+  .gallery-professional,.gallery-reception{grid-row:span 2}
+  .gallery-room,.gallery-consultation,.gallery-details{grid-row:3}
+  .gallery-room{grid-column:span 2;height:320px!important;align-self:start}
+  .gallery-consultation,.gallery-details{grid-column:span 1;height:320px!important;align-self:start}
+  .gallery-hallway,.gallery-treatment-room{grid-column:span 2;grid-row:4;height:250px!important}
+  .gallery-treatment-suite,.gallery-waiting{grid-column:span 2;grid-row:5;height:250px!important}
+  .gallery-card figcaption{right:17px;bottom:15px;left:17px}
   .process-list{grid-template-columns:repeat(4,1fr)}
   .process-list li{display:block;min-height:210px;padding:24px 20px;border-right:1px solid #cfc8bd}
   .process-list li:first-child{padding-left:0}
